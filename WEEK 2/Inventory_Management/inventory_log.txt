@@ -1,0 +1,14 @@
+Added: Laptop (ID: P001) - Quantity: 5 at Aisle: 1, Shelf: 2, Bin: 3
+Added: Mouse (ID: P002) - Quantity: 10 at Aisle: 2, Shelf: 3, Bin: 1
+Added: Keyboard (ID: P003) - Quantity: 8 at Aisle: 1, Shelf: 4, Bin: 2
+Order Placed: O1001 with priority EXPEDITED
+Order Placed: O1002 with priority STANDARD
+Order Placed: O1003 with priority EXPEDITED
+Processing Order: O1002
+Processing Order: O1001
+Order Fulfilled: O1001 - Laptop
+Order Fulfilled: O1001 - Mouse
+Order Fulfilled: O1002 - Keyboard
+Processing Order: O1003
+Order Fulfilled: O1003 - Mouse
+Order Fulfilled: O1003 - Keyboard
