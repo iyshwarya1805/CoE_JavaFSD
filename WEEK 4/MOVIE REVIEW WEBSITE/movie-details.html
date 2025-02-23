@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Details</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            &#9776; 
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Movie Details</h1>
+    </header>
+    <div id="movie-details"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const movieId = urlParams.get("id");
+
+            fetch("movies.json")
+                .then(response => response.json())
+                .then(movies => {
+                    const movie = movies.find(m => m.id == movieId);
+                    if (movie) {
+                        document.getElementById("movie-details").innerHTML = `
+                            <h2>${movie.title} (${movie.year})</h2>
+                            <img src="${movie.poster}" alt="${movie.title}" onerror="this.onerror=null; this.src='images/default.jpg';">
+                            <p><strong>Director:</strong> ${movie.director}</p>
+                            <p><strong>Storyline:</strong> ${movie.storyline}</p>
+                        `;
+                    } else {
+                        document.getElementById("movie-details").innerHTML = "<p>Movie not found.</p>";
+                    }
+                })
+                .catch(error => console.error("Error loading movie details:", error));
+        });
+    </script>
+        <script src="script.js"></script>
+
+</body>
+</html>

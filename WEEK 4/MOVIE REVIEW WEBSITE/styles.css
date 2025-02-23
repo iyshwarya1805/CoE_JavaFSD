@@ -1,0 +1,232 @@
+body {
+    background: url('https://media-hosting.imagekit.io//b6b8d81a32fe49f2/imm.png?Expires=1834937650&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fQ6WwqRMecabahsRcGWJ3VnMRbHSlqxnfqgz3Tu0xVeSKjXJe~WBlVy5VhplV95M5~nfdQ3Qq6GyHxy4HfdDfOhvZXXXz4IXHRLEepdoERwjObB8mT7tvE-L9OuanIzAwqgPssm7DjICyOVdBnpaF4W59Okvgksonplz3d6IsgaqqASGuaE7mcDrWm9tNLe6XE25Dyk-R~sCbl-oY3f2lN0lfScrli~Q1LkuFj0cE~6Y6jhm-FXEVU0e8M8Z8~tKt-ZvGE05isw-WJGTHtMicUkGdZOE~P9Pr0Cio5hHUzXOLsLi6IV5ZQULU0Uv1eMSlulPjApeV0REQNdreny5sQ__') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #333;
+    padding: 30px;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 250px; 
+    background: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+#movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; 
+    margin: auto; 
+    padding: 20px auto;
+    background: #222; 
+    border-radius: 10px;
+    width: 40%;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #movie-details {
+        width: 80%;
+    }
+}
+
+#movie-details img {
+    padding-top: 10px;
+    width: 50%; 
+    max-width: 500px; 
+    max-height: 500px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+#movie-info {
+    font-size: 20px; 
+    line-height: 1.8; 
+    padding: 10px;
+}
+
+
+.movie-card img {
+    width: 250px; 
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px; 
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-card h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.movie-card p {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+#search-dropdown {
+    width: 20%; 
+    height: 50px;
+    font-size: 18px;
+    padding: 10px 15px; 
+    border: 2px solid #ff6347; 
+    border-radius: 8px;
+    outline: none;
+}
+
+#search-button {
+    height: 50px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+
+#search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input, button, select, textarea {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #ff6347;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff473a;
+}
+
+#reviews-container {
+    padding: 20px;
+}
+img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+#star-rating {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star {
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.active {
+    color: gold; 
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

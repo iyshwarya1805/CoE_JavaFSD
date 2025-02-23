@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('https://media-hosting.imagekit.io//b6b8d81a32fe49f2/imm.png?Expires=1834937650&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fQ6WwqRMecabahsRcGWJ3VnMRbHSlqxnfqgz3Tu0xVeSKjXJe~WBlVy5VhplV95M5~nfdQ3Qq6GyHxy4HfdDfOhvZXXXz4IXHRLEepdoERwjObB8mT7tvE-L9OuanIzAwqgPssm7DjICyOVdBnpaF4W59Okvgksonplz3d6IsgaqqASGuaE7mcDrWm9tNLe6XE25Dyk-R~sCbl-oY3f2lN0lfScrli~Q1LkuFj0cE~6Y6jhm-FXEVU0e8M8Z8~tKt-ZvGE05isw-WJGTHtMicUkGdZOE~P9Pr0Cio5hHUzXOLsLi6IV5ZQULU0Uv1eMSlulPjApeV0REQNdreny5sQ__') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333; 
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white; 
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background-color: #555; 
+            border-radius: 5px;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f8f8f8;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        header h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        .review-container {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 50%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        select, input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .star {
+            font-size: 30px;
+            transition: transform 0.3s;
+        }
+
+        .star:hover, .star.selected {
+            color: #ffcc00;
+            transform: scale(1.2);
+        }
+
+        .button-group button {
+            background: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .button-group button:hover {
+            background: #e6b800;
+            transform: scale(1.05);
+        }
+
+        #reviews-container {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 600px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            &#9776;
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+    
+
+    <header>
+        <h1>🎬 Write a Review</h1>
+    </header>
+
+    <div class="review-container">
+        <div class="form-group">
+            <label for="movie-select">🎥 Select Movie:</label>
+            <select id="movie-select"></select>
+        </div>
+
+        <div class="form-group">
+            <label for="review-rating">⭐ Rating:</label>
+            <div id="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+        </div>
+
+        <input type="text" id="reviewer-name" placeholder="Your Name">
+        <textarea id="review-text" placeholder="Write your review here..."></textarea>
+        
+        <div class="button-group">
+            <button id="submit-review">Submit Review</button>
+        </div>
+    </div>
+
+    <div id="reviews-container">
+        <h3>Movie Reviews</h3>
+        <div id="reviews-list"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
