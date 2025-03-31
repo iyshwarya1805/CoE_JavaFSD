@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="page-title">Explore Destinations</h2>
+
+  <!-- Search Input -->
+  <input 
+    type="text" 
+    [(ngModel)]="searchKeyword" 
+    placeholder="Search Destinations"
+    class="search-input"
+  />
+
+  <div class="card-container">
+    <div *ngFor="let destination of destinations | filterByProperty: 'name' : searchKeyword; let i = index">
+      <div *ngIf="i < 10" class="destination-card">
+        <img [src]="destination.image" alt="{{ destination.name }}" class="destination-img" />
+        <h3>{{ destination.name | titlecase }}</h3>
+        <p>Added on: {{ destination.addedDate | date: 'fullDate' }}</p>
+        <p>Price: {{ destination.price | currency:'USD' }}</p>
+        <p>{{ destination.description | slice:0:100 }}...</p>
+        <button class="view-more-btn" (click)="viewDestination(destination)">View More</button>
+      </div>
+    </div>
+  </div>
+</div>

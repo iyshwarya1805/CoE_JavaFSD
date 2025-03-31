@@ -1,0 +1,74 @@
+<div class="homepage-container">
+  
+  <!-- Login Section -->
+  <div *ngIf="!isLoggedIn" class="login-box">
+    <h2>🔐 Secure Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <input type="text" formControlName="username" placeholder="Enter your username" required>
+      <input type="password" formControlName="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  </div>
+
+  <!-- Main Content -->
+  <div *ngIf="isLoggedIn">
+
+    <!-- Hero Section with Gradient -->
+    <section class="hero">
+      <h1>🌍 Welcome to RoamReady</h1>
+      <p>Plan, Discover, and Explore effortlessly!</p>
+      <button (click)="navigateTo('/about-us')">Explore Now</button>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-trips">
+      <h2>🏆 Popular Travel Destinations</h2>
+      <div class="cards-container">
+        
+        <div class="card">
+          <img src="http://localhost:8090/beach.jpg" alt="Beach Getaway">
+          <h3>🏖️ Serene Beach Retreats</h3>
+          <p>Unwind with breathtaking ocean views and golden sands.</p>
+          <button (click)="navigateTo('/beach-getaways')">Discover More</button>
+        </div>
+      
+        <div class="card">
+          <img src="http://localhost:8090/mountain.jpg" alt="Mountain Adventure">
+          <h3>⛰️ Exhilarating Mountain Treks</h3>
+          <p>Embark on scenic hikes and experience nature at its finest.</p>
+          <button (click)="navigateTo('/mountain-adventures')">Discover More</button>
+        </div>
+      
+        <div class="card">
+          <img src="http://localhost:8090/urban.jpg" alt="City Tour">
+          <h3>🏙️ Urban Discoveries</h3>
+          <p>Immerse yourself in the energy of vibrant cityscapes.</p>
+          <button (click)="navigateTo('/urban-escapes')">Discover More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <h2>✨ Why Choose RoamReady?</h2>
+      <div class="benefits-container">
+        <div class="benefit">
+          <h3>🚀 Effortless Planning</h3>
+          <p>Seamlessly organize your travels with our intuitive tools.</p>
+        </div>
+        <div class="benefit">
+          <h3>🌟 Personalized Recommendations</h3>
+          <p>Receive tailor-made travel suggestions suited to your preferences.</p>
+        </div>
+        <div class="benefit">
+          <h3>💰 Exclusive Deals</h3>
+          <p>Unlock special offers and cost-effective travel packages.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logout Button -->
+    <button class="logout-btn" (click)="logout()">🔒 Logout Securely</button>
+  </div>
+</div>

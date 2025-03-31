@@ -1,0 +1,81 @@
+/* 🌸 Soft Pink Gradient Full Background */
+body {
+  background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee); /* Soft Pink to Light Blue */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📌 Center the Trips Container */
+.trips-container {
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* 🌅 Trip Cards Grid - Centered */
+.trip-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Center align the cards */
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+/* 🏷 Individual Trip Card */
+.trip-card {
+  background: linear-gradient(to right, #d4fc79, #96e6a1); /* Soft Green Gradient */
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* ✨ Hover Effect */
+.trip-card:hover {
+  transform: translateY(-8px);
+}
+
+/* 🖼 Image Styling */
+.trip-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 🎨 Stylish Add to Wishlist Button */
+button {
+  background: linear-gradient(to right, #ff758c, #ff7eb3); /* Pink Gradient */
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+/* ✨ Button Hover Effect */
+button:hover {
+  background: linear-gradient(to right, #ff6b81, #ff8c94);
+  transform: scale(1.05);
+}
+
+/* 📌 Responsive Fix */
+@media (max-width: 1024px) {
+  .trip-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

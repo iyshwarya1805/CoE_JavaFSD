@@ -1,0 +1,99 @@
+/* Light aesthetic gradient background */
+body {
+  background: linear-gradient(to right, #fceabb, #f8b500); /* Soft gold & yellow */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container Styling */
+.trips-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+  background: linear-gradient(to right, #ffcc80, #ff9800);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.wishlist-btn:hover {
+  background: linear-gradient(to right, #ff9800, #e65100);
+  transform: scale(1.05);
+}
+
+/* Grid Layout - 5 cards per row on large screens */
+.trip-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Individual Trip Card */
+.trip-card {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft pink-peach gradient */
+  color: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Trip Image */
+.trip-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Trip Details */
+.trip-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.trip-card p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Add to Wishlist Button */
+.trip-card button {
+  background: white;
+  color: #ff6f00;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.trip-card button:hover {
+  background: #ffcc80;
+  color: black;
+}

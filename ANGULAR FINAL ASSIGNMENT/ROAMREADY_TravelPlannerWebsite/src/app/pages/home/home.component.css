@@ -1,0 +1,138 @@
+/* General Page Styles */
+.homepage-container {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding: 20px;
+  background: linear-gradient(135deg, #d8b9ff, #a0ffe6); /* Lilac to Cyan Green */
+  min-height: 100vh;
+}
+
+/* Login Box */
+.login-box {
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* Soft Lilac to Light Blue */
+  color: #333;
+}
+.login-box h2 {
+  font-size: 22px;
+}
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+}
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #a084e8; /* Soft Purple */
+  color: white;
+  border-radius: 6px;
+}
+.login-box button:hover {
+  background: #8661c1;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8c1d9, #d4a1f3); /* Soft Pink to Light Purple */
+  color: #333;
+  border-radius: 12px;
+}
+.hero h1 {
+  font-size: 26px;
+}
+.hero p {
+  font-size: 16px;
+}
+.hero button {
+  background: #ff9aa2; /* Pastel Coral Pink */
+  border-radius: 6px;
+}
+.hero button:hover {
+  background: #ff758f;
+}
+
+
+/* Featured Destinations */
+.featured-trips h2 {
+  text-align: center;
+  font-size: 24px;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  width: 300px;
+  padding: 15px;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* Soft Lilac to Light Blue */
+  border-radius: 12px;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card button {
+  background: linear-gradient(135deg, #b19cd9, #9370db); /* Soft Lilac to Medium Purple */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+.card button:hover {
+  background: linear-gradient(135deg, #9370db, #7a5dc7); /* Slightly Darker Purple */
+  transform: scale(1.05);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  text-align: center;
+  margin: 40px 0;
+}
+.benefits-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.benefit {
+  width: 250px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logout Button */
+.logout-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #d8b9ff, #a0ffe6); /* Lilac to Cyan Green */
+  color: white;
+  border-radius: 8px;
+}
+.logout-btn:hover {
+  background: #bfa0ff;
+}

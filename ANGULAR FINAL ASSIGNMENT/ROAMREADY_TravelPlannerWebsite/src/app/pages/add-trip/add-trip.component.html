@@ -1,0 +1,33 @@
+<div class="add-trip-container">
+  <h2>✈️ Share Your Travel Experience</h2>
+
+  <div class="add-trip-form">
+    <input type="text" [(ngModel)]="newTrip.name" placeholder="Trip Name">
+    <input type="text" [(ngModel)]="newTrip.destination" placeholder="Destination">
+    <input type="date" [(ngModel)]="newTrip.date">
+
+    <textarea [(ngModel)]="newTrip.experience" placeholder="Share Your Experience"></textarea>
+    <input type="number" [(ngModel)]="newTrip.budget" placeholder="Total Budget Spent ($)">
+    <textarea [(ngModel)]="newTrip.description" placeholder="Trip Highlights & Details"></textarea>
+
+    <!-- Image Upload -->
+    <input type="file" (change)="onImageUpload($event)">
+
+    <button class="add-trip-btn" (click)="addTrip()">Add Trip</button>
+  </div>
+
+  <div class="trips-list">
+    <h3>🗺️ My Trips</h3>
+    <div class="trips-container">
+      <div class="trip-card" *ngFor="let trip of trips">
+        <h4>📌 {{ trip.name }} - {{ trip.destination }} 📅 {{ trip.date }}</h4>
+        <p>✨ <strong>Experience:</strong> {{ trip.experience }}</p>
+        <p>💰 <strong>Budget Spent:</strong> ${{ trip.budget }}</p>
+        <p>📝 <strong>Description:</strong> {{ trip.description }}</p>
+        <div class="trip-image" *ngIf="trip.image">
+          <img [src]="trip.image" alt="Trip Image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

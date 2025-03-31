@@ -1,0 +1,8 @@
+<h2>Your Wishlist</h2>
+<div class="wishlist-container">
+  <div *ngFor="let trip of wishlist">
+    <img [src]="trip.image" alt="{{ trip.name }}" />
+    <h3>{{ trip.name }}</h3>
+    <p>{{ trip.description }}</p>
+  </div>
+</div>

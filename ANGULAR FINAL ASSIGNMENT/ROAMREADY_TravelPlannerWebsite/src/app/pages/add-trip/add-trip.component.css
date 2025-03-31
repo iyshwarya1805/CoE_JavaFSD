@@ -1,0 +1,89 @@
+/* Gradient Background */
+.trips-list {
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb); /* Purple-Pink Gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Horizontal Scroll Container */
+.trips-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Horizontal scrolling */
+  padding: 10px;
+}
+
+/* Trip Card Styling */
+.trip-card {
+  flex: 0 0 300px; /* Fixed width for each card */
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.trip-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.trip-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+/* Form Styling */
+.add-trip-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Style Inputs */
+.add-trip-form input,
+.add-trip-form textarea {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Style Button */
+.add-trip-btn {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-trip-btn:hover {
+  background: #e0484d;
+}
+/* Gradient Background for Form */
+.add-trip-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft Pink-Orange Gradient */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: auto;
+}

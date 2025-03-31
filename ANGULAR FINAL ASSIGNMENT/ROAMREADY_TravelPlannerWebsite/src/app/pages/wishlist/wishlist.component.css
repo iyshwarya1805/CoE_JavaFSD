@@ -1,0 +1,21 @@
+.wishlist-container {
+    text-align: center;
+  }
+  
+  .wishlist-item {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .wishlist-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  

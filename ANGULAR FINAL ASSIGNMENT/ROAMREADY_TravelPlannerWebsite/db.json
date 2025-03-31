@@ -1,0 +1,59 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "name": "Taj Mahal",
+      "description": "A UNESCO World Heritage Site and one of the Seven Wonders of the World.",
+      "image": "http://localhost:8090/tajmahal.jpg"
+    },
+    
+    {
+      "id": 3,
+      "name": "Jaipur - Hawa Mahal",
+      "description": "A magnificent palace known for its unique honeycomb architecture.",
+      "image": "http://localhost:8090/hawa-mahal.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Mysore Palace",
+      "description": "A grand palace famous for its Indo-Saracenic architecture and royal heritage.",
+      "image": "http://localhost:8090/mysore_palace.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Varanasi Ghats",
+      "description": "Spiritual center of India, known for its sacred Ganges river and ancient temples.",
+      "image": "http://localhost:8090/varanasi_ghats.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Red Fort",
+      "description": "A historic fort in Delhi, an important symbol of India's independence.",
+      "image": "http://localhost:8090/red_fort.jpg"
+    },
+    {
+      "id": 7,
+      "name": "India Gate",
+      "description": "A war memorial dedicated to Indian soldiers of World War I.",
+      "image": "http://localhost:8090/india_gate.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Golden Temple",
+      "description": "The holiest Sikh Gurudwara, known for its stunning golden architecture.",
+      "image": "http://localhost:8090/golden_temple.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Rann of Kutch",
+      "description": "A vast white salt desert famous for the Rann Utsav festival.",
+      "image": "http://localhost:8090/rann_of_kutch.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Backwaters of Kerala",
+      "description": "A scenic network of lakes, rivers, and canals, perfect for houseboat cruises.",
+      "image": "http://localhost:8090/kerala_backwaters.jpg"
+    }
+  ]
+}

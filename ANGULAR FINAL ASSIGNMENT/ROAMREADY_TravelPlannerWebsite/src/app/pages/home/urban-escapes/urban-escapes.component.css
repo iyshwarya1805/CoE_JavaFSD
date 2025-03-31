@@ -1,0 +1,71 @@
+/* Urban Escapes Page Styles */
+.destination-container {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #1A1A2E, #16213E, #0F3460, #E94560); /* Dark Night to Neon Glow */
+    min-height: 100vh;
+    color: white;
+  }
+  
+  /* Title and Description */
+  .destination-container h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #F8F9FA; /* Soft White for Contrast */
+  }
+  .destination-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #D1D9E6; /* Light Grayish White */
+  }
+  
+  /* Card Grid */
+  .card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Destination Card */
+  .destination-card {
+    width: 280px;
+    padding: 15px;
+    background: linear-gradient(135deg, #2D2D44, #3F3F74, #6A097D); /* Futuristic City Gradient */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3); /* Neon Glow Effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #EAEAEA;
+  }
+  .destination-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+  .destination-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #FF007F; /* Neon Pink Title */
+  }
+  .destination-card p {
+    font-size: 16px;
+  }
+  .destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.7); /* Stronger Neon Glow */
+    background: linear-gradient(135deg, #4A4E69, #6A097D, #FF007F); /* More Vibrant Glow */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .destination-card {
+      width: 90%;
+    }
+  }
+  

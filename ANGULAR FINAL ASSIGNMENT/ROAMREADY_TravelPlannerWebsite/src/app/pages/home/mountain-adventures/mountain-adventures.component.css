@@ -1,0 +1,69 @@
+/* Mountain Adventures Page Styles */
+.destination-container {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #1E3C72, #2A5298, #609ED3); /* Deep Blue to Alpine Sky */
+    min-height: 100vh;
+    color: white;
+  }
+  
+  /* Title and Description */
+  .destination-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #E0F7FA; /* Soft Icy Blue */
+  }
+  .destination-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #F0FFFF; /* Light Frosty White */
+  }
+  
+  /* Card Grid */
+  .card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Destination Card */
+  .destination-card {
+    width: 280px;
+    padding: 15px;
+    background: linear-gradient(135deg, #8E9EAB, #E0E5EC); /* Misty Mountain Gradient */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    color: #333;
+  }
+  .destination-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+  .destination-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .destination-card p {
+    font-size: 16px;
+  }
+  .destination-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #5C6B73, #AAB7C4, #F4F9FF); /* Soft Snowy Hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .destination-card {
+      width: 90%;
+    }
+  }
+  

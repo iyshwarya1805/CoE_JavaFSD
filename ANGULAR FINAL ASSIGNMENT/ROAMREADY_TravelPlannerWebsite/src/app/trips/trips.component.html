@@ -1,0 +1,21 @@
+<div class="trips-container">
+  <!-- 🌎 Page Title -->
+  <h1>🇮🇳 Explore the Wonders of India</h1>
+<p>Discover the most iconic destinations across India, from the majestic Taj Mahal to the serene backwaters of Kerala. Add your favorite places to your wishlist and start your incredible journey!</p>
+
+
+  <!-- 🎴 Grid for Trip Cards -->
+  <div class="trip-cards" *ngIf="trips.length > 0; else noTrips">
+    <div class="trip-card" *ngFor="let trip of trips">
+      <img [src]="trip.image" alt="{{ trip.name }}" class="trip-image" />
+      <h2>📍 {{ trip.name }}</h2>
+      <p>{{ trip.description }}</p>
+      <button (click)="addToWishlist(trip)">Add to Wishlist</button>
+    </div>
+  </div>
+
+  <!-- If No Trips Available -->
+  <ng-template #noTrips>
+    <p>No trips available.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,11 @@
+<header>
+  <app-menu-bar></app-menu-bar>
+</header>
+<main>
+  <nav>
+    <a routerLink="/trips">Trips</a>
+    <a routerLink="/add-trip" *ngIf="isLoggedIn()">Add Trip</a>
+    <button (click)="logout()" *ngIf="isLoggedIn()">Logout</button>
+  </nav>
+  <router-outlet></router-outlet>
+</main>
